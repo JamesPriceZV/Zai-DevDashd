@@ -1,0 +1,80 @@
+# Minimal local configuration. External adapters are opt-in.
+auth_group = "zai-devdashd"
+allow_localhost_unauth = true
+
+[server]
+host = "127.0.0.1"
+port = 8780
+
+[state]
+# Blank uses ~/Library/Application Support/zai-devdashd.
+dir = ""
+
+[service]
+label = "org.zai.devdashd"
+allow_restart = false
+
+[adapters]
+local_system = true
+git = false
+github = false
+remote = false
+devices = false
+usage = false
+reviewers = false
+hardware_detail = false
+
+[labels]
+enabled = false
+
+[executive_ai]
+enabled = false
+model = "system"
+
+[executive_feed]
+producer_id = ""
+
+[github]
+bin = "gh"
+repo = ""
+integration_branch = ""
+
+[worker]
+name = "Build host"
+computer = ""
+host = ""
+user = ""
+ip = ""
+
+[remote]
+enabled = false
+name = "Remote host"
+computer = ""
+host = ""
+
+[devices]
+numbers = []
+
+[autotune_monitor]
+status_path = ""
+policy_sha256 = ""
+producer_chat_id = ""
+historical_valid = -1
+
+[release_scope]
+path = ""
+sha256 = ""
+
+[paths]
+repo = ""
+executive_owner = ""
+programs_registry = ""
+scratch = ""
+
+[telemetry]
+usage_dir = ""
+reviewer_rollup = ""
+codex_sessions_dir = ""
+lanes_root = ""
+run_logs = ""
+pricing = ""

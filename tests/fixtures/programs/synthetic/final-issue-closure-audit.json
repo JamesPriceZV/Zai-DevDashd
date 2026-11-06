@@ -1,0 +1,47 @@
+{
+  "issues": [
+    {
+      "number": 101,
+      "state": "closed",
+      "stateReason": "completed",
+      "closureValid": true
+    },
+    {
+      "number": 102,
+      "state": "closed",
+      "stateReason": "completed",
+      "closureValid": true
+    },
+    {
+      "number": 103,
+      "state": "closed",
+      "stateReason": "completed",
+      "closureValid": true
+    },
+    {
+      "number": 104,
+      "state": "closed",
+      "stateReason": "completed",
+      "closureValid": true
+    },
+    {
+      "number": 105,
+      "state": "closed",
+      "stateReason": "completed",
+      "closureValid": true
+    }
+  ],
+  "canonical12": "open",
+  "parent11": {
+    "state": "open",
+    "draft": true,
+    "head": "c149dfd1ef31c044bd427aa40883d85bd5677c23"
+  },
+  "child13": {
+    "merged": true,
+    "merge": "c149dfd1ef31c044bd427aa40883d85bd5677c23",
+    "base": "synthetic/foundation"
+  },
+  "observedAt": "2001-06-06T14:20:00Z",
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

@@ -1,0 +1,64 @@
+{
+  "_fixture": "SYNTHETIC_ACCOUNT_DATA_NOT_REAL_USAGE",
+  "usage": {
+    "codex": {
+      "source": "synthetic",
+      "usage": {
+        "loginMethod": "Synthetic plan",
+        "updatedAt": "2001-06-06T12:00:00Z",
+        "primary": {
+          "usedPercent": 25,
+          "windowMinutes": 10080,
+          "resetsAt": "2001-06-10T00:00:00Z"
+        }
+      }
+    },
+    "cursor": {
+      "source": "synthetic",
+      "usage": {
+        "loginMethod": "Synthetic IDE plan",
+        "updatedAt": "2001-06-06T12:00:00Z",
+        "primary": {
+          "usedPercent": 30,
+          "windowMinutes": 10080,
+          "resetsAt": "2001-06-10T00:00:00Z"
+        }
+      }
+    },
+    "coderabbit": {
+      "source": "synthetic",
+      "usage": {
+        "updatedAt": "2001-06-06T12:00:00Z",
+        "details": [
+          {
+            "rows": [
+              {
+                "label": "Reviews",
+                "value": "3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "cost": {
+    "codex": {
+      "totalTokens": 1200,
+      "totalCost": 2,
+      "projects": [
+        {
+          "path": "/synthetic/ExampleProject",
+          "totalTokens": 1200,
+          "totalCost": 2
+        }
+      ],
+      "last30DaysTokens": 1200,
+      "last30DaysCostUSD": 2,
+      "sessionTokens": 100,
+      "sessionCostUSD": 0.2,
+      "source": "synthetic arithmetic"
+    }
+  },
+  "at": {}
+}

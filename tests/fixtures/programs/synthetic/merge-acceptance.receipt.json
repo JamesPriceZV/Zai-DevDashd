@@ -1,0 +1,14 @@
+{
+  "pr": 13,
+  "merged": true,
+  "mergeCommit": "c149dfd1ef31c044bd427aa40883d85bd5677c23",
+  "qualifiedProductSource": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "reviewedPublishedHead": "2cf3828d2bab145c686729f0114c590bf223ace1",
+  "identicalToPublishedCandidate": true,
+  "qualifiedSourceIsAncestor": true,
+  "v1Promoted": false,
+  "mergeTree": "e450212c4f9f415807dfe50e8d4db8d64c43c381",
+  "base": "synthetic/foundation",
+  "observedAt": "2001-06-06T14:20:00Z",
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

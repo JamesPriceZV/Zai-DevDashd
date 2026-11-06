@@ -1,0 +1,13 @@
+include README.md LICENSE LICENSE-DOCS.md THIRD_PARTY_NOTICES.md config.example.toml
+recursive-include LICENSES *.txt
+recursive-include src/zai_devdashd/static *.html *.svg
+recursive-include src/zai_devdashd/resources *.json *.py *.sh
+recursive-include tests *.py *.json *.jsonl *.tsv *.md
+recursive-include scripts *.sh *.swift
+recursive-include templates *.in
+global-exclude *.py[cod] *.key *.pem *.crt *.cer *.p12 *.p8 *.db *.sqlite*
+prune build
+prune dist
+prune .venv
+prune cache
+prune logs

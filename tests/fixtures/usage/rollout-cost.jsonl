@@ -1,0 +1,6 @@
+{"_fixture":"SYNTHETIC_TEST_DATA_ONLY","type":"turn_context","payload":{"model":"m-cheap"}}
+{"_fixture":"SYNTHETIC_TEST_DATA_ONLY","type":"event_msg","timestamp":"2026-01-02T03:01:00Z","payload":{"type":"token_count","info":{"total_token_usage":{"total_tokens":600},"last_token_usage":{"input_tokens":500,"cached_input_tokens":400,"output_tokens":100,"total_tokens":600}}}}
+{"_fixture":"SYNTHETIC_TEST_DATA_ONLY","type":"event_msg","timestamp":"2026-01-02T03:02:00Z","payload":{"type":"token_count","info":{"total_token_usage":{"total_tokens":2700},"last_token_usage":{"input_tokens":2000,"cached_input_tokens":1000,"output_tokens":100,"total_tokens":2100}}}}
+{"_fixture":"SYNTHETIC_TEST_DATA_ONLY","type":"event_msg","timestamp":"2026-01-02T03:02:10Z","payload":{"type":"token_count","info":{"total_token_usage":{"total_tokens":2700},"last_token_usage":{"input_tokens":2000,"cached_input_tokens":1000,"output_tokens":100,"total_tokens":2100}}}}
+{"_fixture":"SYNTHETIC_TEST_DATA_ONLY","type":"turn_context","payload":{"model":"m-dear"}}
+{"_fixture":"SYNTHETIC_TEST_DATA_ONLY","type":"event_msg","timestamp":"2026-01-02T03:03:00Z","payload":{"type":"token_count","info":{"total_token_usage":{"total_tokens":3700},"last_token_usage":{"input_tokens":0,"output_tokens":1000,"total_tokens":1000}}}}

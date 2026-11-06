@@ -1,0 +1,1 @@
+{"catalog": {"providers": {"openai": {"models": {"m-cheap": {"cost": {"input": 2, "cache_read": 0.1, "output": 10, "context_over_200k": {"input": 4, "cache_read": 0.2, "output": 15}, "tiers": [{"tier": {"size": 1000}}]}}, "m-dear": {"cost": {"input": 10, "output": 10}}}}}}, "_fixture": "SYNTHETIC_ARITHMETIC_RATES_NOT_PROVIDER_PRICES"}

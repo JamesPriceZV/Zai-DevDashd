@@ -1,0 +1,17 @@
+{
+  "result": "Passed",
+  "passedTests": 7,
+  "totalTestCount": 7,
+  "failedTests": 0,
+  "skippedTests": 0,
+  "devicesAndConfigurations": [
+    {
+      "device": {
+        "platform": "macOS",
+        "name": "Synthetic test Mac"
+      }
+    }
+  ],
+  "finishTime": "2001-06-06T14:10:00Z",
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

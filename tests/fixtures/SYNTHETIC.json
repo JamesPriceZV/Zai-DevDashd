@@ -1,0 +1,34 @@
+{
+  "fixture_status": "SYNTHETIC_TEST_DATA_ONLY",
+  "not_acceptance": true,
+  "provenance": "Current file-backed fixtures are constructed from public parser field contracts and assertions. The four inline operational stories listed below are independently reconstructed scenarios, not retained private events or acceptance evidence.",
+  "program_counts": {
+    "passed": 7,
+    "suites": 2,
+    "new": 3,
+    "simulator_pins": 3
+  },
+  "identity_generation": "SHA1 of SYNTHETIC TEST DATA ONLY plus qualified/published/merged/documentation/tree labels.",
+  "inline_story_files": [
+    "tests/test_accomplishments.py",
+    "tests/test_hwinfo.py",
+    "tests/test_pipeline_accuracy.py",
+    "tests/test_pipeline_v2.py"
+  ],
+  "inline_story_identity_generation": {
+    "algorithm": "SHA-256 of a public semantic fixture label, truncated to40 lowercase hexadecimal characters for git-shaped fields. These are not source revisions.",
+    "namespaces": [
+      "zai-devdashd synthetic accomplishments v1:",
+      "zai-devdashd synthetic worker watch v1:",
+      "zai-devdashd public synthetic "
+    ]
+  },
+  "inline_story_time_scenarios": {
+    "zone": "America/Toronto",
+    "accomplishments": "Invented March2025 Sunday/Monday spring-DST boundary and topic-branch events; fake wall clock keeps cache tests deterministic.",
+    "worker_watch": "Invented February2025 completed-failure and orphaned-start markers.",
+    "pipeline_accuracy": "Invented April2025 pipeline duration and incomplete-stage inputs.",
+    "pipeline_board": "Invented November2025 pre-fold EDT status lines; no recorded device or PR history."
+  },
+  "inline_story_scope": "Invented PR/build numbers, branches, identifiers, event prose and timestamps preserve parser/validation behaviors only. Synthetic pass/exit/status words are test input and never release, model or runtime receipts."
+}

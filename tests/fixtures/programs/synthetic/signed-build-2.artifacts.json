@@ -1,0 +1,27 @@
+{
+  "source": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "versions": [
+    {
+      "build": "12.0",
+      "version": "1.12.0"
+    }
+  ],
+  "signatures": [
+    {
+      "name": "app",
+      "team": "SYNTHETIC-TEAM",
+      "verificationExitCode": 0
+    },
+    {
+      "name": "helper",
+      "team": "SYNTHETIC-TEAM",
+      "verificationExitCode": 0
+    },
+    {
+      "name": "embedded-helper-1",
+      "team": "SYNTHETIC-TEAM",
+      "verificationExitCode": 0
+    }
+  ],
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

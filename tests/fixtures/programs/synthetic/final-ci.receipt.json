@@ -1,0 +1,25 @@
+{
+  "publishedHead": "2cf3828d2bab145c686729f0114c590bf223ace1",
+  "qualifiedProductSource": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "productBytesUnchanged": true,
+  "combinedStatus": "success",
+  "statuses": [
+    {
+      "context": "synthetic-lint",
+      "state": "success"
+    }
+  ],
+  "checks": [
+    {
+      "name": "synthetic-check",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "completedLifecycleRun": {
+    "source": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+    "conclusion": "success"
+  },
+  "observedAt": "2001-06-06T14:17:00Z",
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

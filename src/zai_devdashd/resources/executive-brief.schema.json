@@ -1,0 +1,101 @@
+{
+  "title": "ExecutiveBrief",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "summary": {"$ref": "#/$defs/Claim"},
+    "next_action": {"$ref": "#/$defs/Claim"},
+    "value_propositions": {
+      "type": "array",
+      "description": "Scoped draft benefits of cited input features; retain their availability boundaries.",
+      "items": {"$ref": "#/$defs/FeatureClaim"},
+      "minItems": 0,
+      "maxItems": 2
+    },
+    "swot": {
+      "title": "SWOT",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "strengths": {
+          "type": "array",
+          "description": "Strengths supported by the cited facts in their reported scope.",
+          "items": {"$ref": "#/$defs/Claim"},
+          "minItems": 0,
+          "maxItems": 2
+        },
+        "weaknesses": {
+          "type": "array",
+          "description": "Limitations supported by the cited facts.",
+          "items": {"$ref": "#/$defs/Claim"},
+          "minItems": 0,
+          "maxItems": 2
+        },
+        "opportunities": {
+          "type": "array",
+          "description": "Proposals labelled Hypothesis:, not observed or accepted outcomes.",
+          "items": {"$ref": "#/$defs/Claim"},
+          "minItems": 0,
+          "maxItems": 2
+        },
+        "threats": {
+          "type": "array",
+          "description": "Risks labelled Hypothesis:, not established events.",
+          "items": {"$ref": "#/$defs/Claim"},
+          "minItems": 0,
+          "maxItems": 2
+        }
+      },
+      "required": ["strengths", "weaknesses", "opportunities", "threats"],
+      "x-order": ["strengths", "weaknesses", "opportunities", "threats"]
+    }
+  },
+  "required": ["summary", "next_action", "value_propositions", "swot"],
+  "x-order": ["summary", "next_action", "value_propositions", "swot"],
+  "$defs": {
+    "Claim": {
+      "title": "Claim",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "At most 180 characters using only cited facts. Owner reports remain reports; unfinished or unconfirmed work is not stable, complete or delivered."
+        },
+        "evidence_ids": {
+          "type": "array",
+          "description": "Nonempty citations copied from supplied evidence_id values.",
+          "items": {"type": "string"},
+          "minItems": 1,
+          "maxItems": 8
+        }
+      },
+      "required": ["text", "evidence_ids"],
+      "x-order": ["text", "evidence_ids"]
+    },
+    "FeatureClaim": {
+      "title": "FeatureClaim",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "feature_id": {
+          "type": "string",
+          "description": "An id from the supplied features, also cited as feature:<id> in evidence_ids."
+        },
+        "text": {
+          "type": "string",
+          "description": "At most 180 characters describing a proposed benefit within the feature's reported availability boundaries."
+        },
+        "evidence_ids": {
+          "type": "array",
+          "description": "Cited input evidence IDs including this feature's feature:<id> binding.",
+          "items": {"type": "string"},
+          "minItems": 1,
+          "maxItems": 8
+        }
+      },
+      "required": ["feature_id", "text", "evidence_ids"],
+      "x-order": ["feature_id", "text", "evidence_ids"]
+    }
+  }
+}

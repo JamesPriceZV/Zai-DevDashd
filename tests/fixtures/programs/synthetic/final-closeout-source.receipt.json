@@ -1,0 +1,10 @@
+{
+  "acceptedMerge": "c149dfd1ef31c044bd427aa40883d85bd5677c23",
+  "closeoutHead": "eb9f456050937dbcc07cc245c1406ca6eedf51a5",
+  "qualifiedProductSource": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "deltaFromQualifiedSource": [
+    "README.md"
+  ],
+  "productBytesUnchanged": true,
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

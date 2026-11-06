@@ -1,0 +1,9 @@
+{
+  "source": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "build": "12.0",
+  "passed": 7,
+  "suites": 2,
+  "failed": 0,
+  "skipped": 0,
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

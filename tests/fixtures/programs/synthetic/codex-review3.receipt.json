@@ -1,0 +1,12 @@
+{
+  "source": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "verdict": "PASS",
+  "files": 2,
+  "reviewCycle": 1,
+  "introducedActionableFindings": [],
+  "manifestMismatches": 0,
+  "cleanDetachedAtCompletion": true,
+  "baseIsAncestor": true,
+  "completedAt": "2001-06-06T14:15:00Z",
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

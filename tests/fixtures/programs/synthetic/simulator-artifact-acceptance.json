@@ -1,0 +1,37 @@
+{
+  "source": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "result": "PASS",
+  "nativeExitCode": 0,
+  "pair": "13.0",
+  "app": {
+    "CFBundleVersion": "13.0",
+    "architectures": [
+      "arm64",
+      "x86_64"
+    ],
+    "sdk": "iphonesimulator-test"
+  },
+  "xcresult": {
+    "warningCount": 2,
+    "status": "succeeded",
+    "errorCount": 0
+  },
+  "sourceState": {
+    "head": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+    "pinnedCheckouts": 3
+  },
+  "checks": {
+    "nativeExitZero": true,
+    "xcresultSucceeded": true,
+    "exactSource": true,
+    "onlyThreeAuthorizedIdentityChanges": true,
+    "canonicalProjectIdentity": true,
+    "appPlistIdentity": true,
+    "dualArchitecture": true,
+    "packageManifestUnchanged": true,
+    "allCheckoutPinsUnchanged": true
+  },
+  "scope": "Synthetic unsigned compile-only parser example; no native work ran",
+  "finishedAt": "2001-06-06T14:10:00Z",
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

@@ -1,0 +1,18 @@
+{
+  "source": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "newTestsExecutedPassed": 3,
+  "newTestsExpected": 3,
+  "totalTestsExecutedPassed": 7,
+  "skipped": 0,
+  "newTestNames": [
+    "syntheticA",
+    "syntheticB",
+    "syntheticC"
+  ],
+  "lintScopedFiles": 2,
+  "unchangedSincePriorFullLint": 1,
+  "changedFilesNarrowLintZero": [
+    "Synthetic.swift"
+  ],
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}

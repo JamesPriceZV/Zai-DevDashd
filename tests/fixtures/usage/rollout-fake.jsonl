@@ -1,0 +1,2 @@
+{"_fixture":"SYNTHETIC_TEST_DATA_ONLY","type":"session_meta","payload":{"cwd":"/synthetic/worktrees/codex-pr9001-x","timestamp":"2026-01-02T03:00:00Z"}}
+{"_fixture":"SYNTHETIC_TEST_DATA_ONLY","type":"event_msg","timestamp":"2026-01-02T03:05:00Z","payload":{"type":"token_count","info":{"total_token_usage":{"total_tokens":2500}},"rate_limits":{"primary":{"used_percent":12.5,"window_minutes":10080,"resets_at":1767929400},"plan_type":"testplan"}}}

@@ -1,0 +1,524 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "zai-devdashd.executive-owner.v1",
+  "title": "Coordinator executive report",
+  "description": "Owner-reported delivery and operations. Receipt bindings are not independent acceptance; original result clocks must be retained. No workload control authority.",
+  "type": "object",
+  "required": [
+    "schema",
+    "producer_chat_id",
+    "observed_at",
+    "candidate",
+    "scope_complete",
+    "release_scope_complete",
+    "features",
+    "release_checks",
+    "operations",
+    "history",
+    "blockers"
+  ],
+  "properties": {
+    "schema": {
+      "const": "zai-devdashd.executive-owner.v1"
+    },
+    "producer_chat_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "Explicit configured producer identity; examples are synthetic, not accepted production feeds."
+    },
+    "observed_at": {
+      "oneOf": [
+        {
+          "type": "number",
+          "minimum": 0
+        },
+        {
+          "type": "string",
+          "format": "date-time"
+        }
+      ]
+    },
+    "candidate": {
+      "type": "object",
+      "properties": {
+        "sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "build": {
+          "type": "string",
+          "maxLength": 400
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 400
+        }
+      },
+      "required": [
+        "sha",
+        "build",
+        "title"
+      ]
+    },
+    "scope_complete": {
+      "type": "boolean"
+    },
+    "release_scope_complete": {
+      "type": "boolean"
+    },
+    "features": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "receipt_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "benefit": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "state": {
+            "enum": [
+              "planned",
+              "in_progress",
+              "integrated",
+              "accepted",
+              "blocked"
+            ]
+          },
+          "reported_at": {
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "benefit",
+          "state"
+        ]
+      }
+    },
+    "release_checks": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "receipt_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "stage": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "state": {
+            "enum": [
+              "pending",
+              "running",
+              "passed",
+              "failed",
+              "blocked",
+              "not_required"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "reported_at": {
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "stage",
+          "state",
+          "required"
+        ]
+      }
+    },
+    "operations": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "receipt_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "kind": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "machine": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "profile": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "owner": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "next_action": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "state": {
+            "enum": [
+              "queued",
+              "scheduled",
+              "running",
+              "completed",
+              "failed",
+              "blocked",
+              "cancelled"
+            ]
+          },
+          "depends_on": {
+            "type": "array",
+            "maxItems": 16,
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+            }
+          },
+          "started_at": {
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          },
+          "scheduled_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "schedule_confirmed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "kind",
+          "machine",
+          "profile",
+          "owner",
+          "state",
+          "depends_on"
+        ]
+      }
+    },
+    "history": {
+      "type": "array",
+      "maxItems": 256,
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_sha": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "receipt_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "kind": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "machine": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "profile": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "outcome": {
+            "enum": [
+              "passed",
+              "failed"
+            ]
+          },
+          "started_at": {
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          },
+          "completed_at": {
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "machine",
+          "profile",
+          "outcome",
+          "started_at",
+          "completed_at",
+          "source_sha",
+          "receipt_sha256"
+        ]
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "owner": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "impact": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "next_action": {
+            "type": "string",
+            "maxLength": 400
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "owner",
+          "impact",
+          "next_action"
+        ]
+      }
+    },
+    "marketing_facts": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 600
+          }
+        },
+        "required": [
+          "id",
+          "text"
+        ]
+      }
+    },
+    "scope_label": {
+      "type": "string",
+      "maxLength": 400
+    },
+    "proposed_candidate": {
+      "type": "object",
+      "properties": {
+        "sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "build": {
+          "type": "string",
+          "maxLength": 400
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 400
+        }
+      },
+      "required": [
+        "sha",
+        "build",
+        "title"
+      ]
+    },
+    "inventory": {
+      "type": "object",
+      "required": [
+        "common",
+        "B",
+        "C",
+        "D",
+        "conditional",
+        "total"
+      ],
+      "properties": {
+        "common": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        },
+        "B": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        },
+        "C": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        },
+        "D": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        },
+        "conditional": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5000
+        }
+      }
+    },
+    "planning_forecasts": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "start_date",
+          "end_date",
+          "confidence",
+          "conditions"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9_.:-]{0,95}$"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 400
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "moderate",
+              "high"
+            ]
+          },
+          "conditions": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {
+              "type": "string",
+              "maxLength": 400
+            }
+          }
+        }
+      }
+    }
+  }
+}

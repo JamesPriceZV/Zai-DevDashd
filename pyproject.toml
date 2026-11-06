@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zai-devdashd"
+version = "0.1.0"
+description = "A local executive dashboard for evidence-backed development operations"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT AND CC-BY-4.0"
+license-files = ["LICENSE", "LICENSE-DOCS.md", "LICENSES/*", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Zai-DevDashd contributors"}]
+dependencies = []
+keywords = ["dashboard", "developer-tools", "macos", "observability"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Web Environment",
+  "Operating System :: MacOS :: MacOS X",
+  "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Repository = "https://github.com/JamesPriceZV/Zai-DevDashd"
+Issues = "https://github.com/JamesPriceZV/Zai-DevDashd/issues"
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "playwright>=1.48,<2"]
+build = ["build>=1,<2"]
+
+[project.scripts]
+zai-devdashd = "zai_devdashd.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+zai_devdashd = ["static/*", "resources/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

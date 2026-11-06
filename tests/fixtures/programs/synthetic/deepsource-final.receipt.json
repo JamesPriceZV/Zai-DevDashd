@@ -1,0 +1,10 @@
+{
+  "source": "0e60e3ecfa390a1f801bfc1c6bdd6419e8aa1d4a",
+  "swiftVerdict": "PASSED",
+  "swiftIssues": 0,
+  "allLanguageIssueCounts": 0,
+  "suppressionsAdded": false,
+  "ignoredFindings": false,
+  "observedAt": "2001-06-06T14:15:00Z",
+  "_fixture": "SYNTHETIC_PARSER_DATA_NOT_REAL_ACCEPTANCE"
+}
